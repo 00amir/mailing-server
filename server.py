@@ -14,7 +14,7 @@ class SubmitRequest(BaseModel):
 def submit_result(req: SubmitRequest):
     sender = os.getenv("GMAIL_USER")
     password = os.getenv("GMAIL_PASS")
-    recipient = sender  # or any address you want
+    recipient = sender  # or change to any address you want
 
     msg = MIMEText(req.message)
     msg["Subject"] = f"Runner {req.runner_id} report"
